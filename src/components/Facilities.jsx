@@ -41,7 +41,7 @@ function Facilities() {
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {FACILITIES.map((facility, index) => (
-            <Reveal key={facility.title} delay={index * 80}>
+            <Reveal key={facility.title} delay={index * 80} direction={index % 2 === 0 ? 'left' : 'right'}>
               <div className={`h-full rounded-xl border-l-4 bg-white p-6 shadow-sm ring-1 ring-slate-100 transition duration-200 hover:-translate-y-1 hover:shadow-md ${ACCENTS[index % ACCENTS.length]}`}>
                 <h3 className="text-lg font-semibold text-slate-900">
                   {facility.title}
