@@ -174,7 +174,7 @@ function Contact() {
                   name="time"
                   type="time"
                   required
-                  min="10:00"
+                  min="09:00"
                   max="19:00"
                   value={formData.time}
                   onChange={handleChange}

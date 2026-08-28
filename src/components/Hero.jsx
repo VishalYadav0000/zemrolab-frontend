@@ -1,6 +1,7 @@
 import { SITE, whatsappHref } from '../siteConfig'
 import Reveal from './Reveal'
 import SplitText from './SplitText'
+import Typewriter from './Typewriter'
 import BackgroundBlobs from './BackgroundBlobs'
 
 function Hero() {
@@ -30,11 +31,13 @@ function Hero() {
             staggerMs={35}
             startDelay={350}
           />
-          <Reveal delay={550}>
-            <p className="mt-1 text-sm italic text-slate-500">
-              {SITE.tagline} &middot; {SITE.subtitle}
-            </p>
-          </Reveal>
+          <Typewriter
+            as="p"
+            text={`${SITE.tagline} · ${SITE.subtitle}`}
+            className="mt-1 text-sm italic text-slate-500"
+            speed={40}
+            startDelay={550}
+          />
           <Reveal delay={100}>
             <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
               ज़ेमोरा लैब बायोटेक समग्र और प्राकृतिक चिकित्सा सेवाएं प्रदान करके
