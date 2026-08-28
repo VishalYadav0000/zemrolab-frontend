@@ -34,6 +34,7 @@ function Contact() {
     <section id="appointment" className="relative overflow-hidden bg-slate-50 px-4 py-20 sm:px-6 lg:px-12 xl:px-20">
       <BackgroundBlobs variant="alt" />
       <div className="relative z-10 mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
+        <div>
         <SplitText
           as="h2"
           text="Visit & Contact"
@@ -104,6 +105,7 @@ function Contact() {
             </a>
           </div>
         </Reveal>
+        </div>
 
         <Reveal delay={120}>
           <form onSubmit={handleSubmit} className="space-y-6 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
