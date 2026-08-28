@@ -1,60 +1,95 @@
-const SERVICES = [
+import Reveal from './Reveal'
+import SplitText from './SplitText'
+import BackgroundBlobs from './BackgroundBlobs'
+
+const TREATMENTS = [
   {
-    title: 'Joint & Body Pain',
+    tag: 'शुगर',
+    title: 'Diabetes & Sugar Management',
     description:
-      'Ayurvedic care for arthritis, slip disc, sciatica and everyday joint or back pain.',
+      'Natural herbal regimens to balance blood sugar levels and enhance pancreatic function.',
   },
   {
-    title: 'Lifestyle Disorders',
+    tag: 'बीपी',
+    title: 'Blood Pressure Regulation (High / Low BP)',
     description:
-      'Natural support for high BP, diabetes (sugar), thyroid problems and obesity.',
+      'Long-term cardiovascular support and stress management therapies.',
   },
   {
-    title: 'Neuro & Stress Care',
+    tag: 'साइटिका',
+    title: 'Sciatica & Chronic Back Pain',
     description:
-      'Herbal support for migraine, memory loss, chronic fatigue and stress management.',
+      'Targeted therapeutic solutions to relieve nerve stiffness, muscle spasms and lower back pain.',
   },
   {
-    title: 'Liver, Kidney & Digestion',
+    tag: 'जोड़ों का दर्द',
+    title: 'Joint Pain & Arthritis Care',
     description:
-      'Ayurvedic solutions for liver, kidney stones and digestive health.',
+      'Anti-inflammatory formulations to restore mobility, ease joint stiffness and strengthen cartilage.',
   },
   {
-    title: "Women's & Children's Health",
+    tag: 'बवासीर',
+    title: 'Piles & Hemorrhoids Treatment',
     description:
-      'Dedicated Ayurvedic care for women\'s health issues and childhood ailments.',
+      'Non-invasive, soothing and effective relief for anorectal conditions without surgery.',
   },
   {
-    title: 'Ayurvedic, Homeopathic & Unani Products',
+    tag: 'त्वचा रोग',
+    title: 'Acne & Dermatological Care',
     description:
-      '100% natural, trusted quality medicines and herbal formulations under one roof.',
+      'Internal blood-purification and herbal treatments for acne, pigmentation and chronic skin allergies.',
+  },
+  {
+    tag: 'पुरुष स्वास्थ्य',
+    title: "Men's Vitality & Physical Wellness",
+    description:
+      'Confidential care focused on stamina, strength and reproductive health.',
+  },
+  {
+    tag: 'जटिल रोग',
+    title: 'Cancer & Chronic Disease Support',
+    description:
+      'Immunity-boosting complementary therapies to assist bodily recovery.',
+  },
+  {
+    tag: 'अन्य रोग',
+    title: 'General Health & Digestion',
+    description:
+      'Fast relief for gas, acidity, indigestion and seasonal infections.',
   },
 ]
 
 function Services() {
   return (
-    <section id="services" className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="text-center text-3xl font-bold text-slate-900 sm:text-4xl">
-          Our Services
-        </h2>
-        <p className="mt-4 text-center text-slate-600">
-          Trusted natural care for a wide range of health concerns.
-        </p>
+    <section id="services" className="relative overflow-hidden bg-slate-50 px-4 py-20 sm:px-6 lg:px-12 xl:px-20">
+      <BackgroundBlobs />
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <SplitText
+          as="h2"
+          text="Treatments & Specialized Services"
+          className="text-center text-3xl font-bold text-slate-900 sm:text-4xl"
+        />
+        <Reveal delay={150}>
+          <p className="mt-4 text-center text-slate-600">
+            Trusted natural care for a wide range of health concerns.
+          </p>
+        </Reveal>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((service) => (
-            <div
-              key={service.title}
-              className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md"
-            >
-              <h3 className="text-lg font-semibold text-slate-900">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                {service.description}
-              </p>
-            </div>
+          {TREATMENTS.map((treatment, index) => (
+            <Reveal key={treatment.title} delay={(index % 3) * 80}>
+              <div className="h-full rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-100 transition duration-200 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
+                  {treatment.tag}
+                </span>
+                <h3 className="mt-3 text-lg font-semibold text-slate-900">
+                  {treatment.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  {treatment.description}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

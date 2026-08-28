@@ -4,9 +4,11 @@ import { SITE, telHref } from '../siteConfig'
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
+  { label: 'Facilities', href: '#facilities' },
+  { label: 'Treatments', href: '#services' },
   { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Appointment', href: '#appointment' },
 ]
 
 function Navbar() {
@@ -14,22 +16,23 @@ function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-3">
-          <img src="/zemrolabLogo.jpeg" alt="Zemora Labs & Biotech logo" className="h-11 w-11 rounded-full object-cover" />
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-12 xl:px-20">
+        <a href="#home" className="flex items-center gap-3 transition duration-200 hover:opacity-80">
+          <img src="/zemrolabLogo.jpeg" alt="Zemora Lab Biotech logo" className="h-11 w-11 rounded-full object-cover" />
           <span className="text-lg font-bold leading-tight text-slate-900 sm:text-xl">
             {SITE.name}
           </span>
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-4 lg:gap-7 md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-slate-600 transition hover:text-emerald-700"
+                className="group relative text-sm font-medium text-slate-600 transition hover:text-emerald-700"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-emerald-700 transition-all duration-300 group-hover:w-full" />
               </a>
             </li>
           ))}
@@ -37,7 +40,7 @@ function Navbar() {
 
         <a
           href={telHref}
-          className="hidden rounded-md bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-emerald-600 md:inline-block"
+          className="hidden rounded-md bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-lg md:inline-block"
         >
           Call Now
         </a>
