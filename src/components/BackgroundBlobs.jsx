@@ -1,7 +1,7 @@
 function BackgroundBlobs({ variant = 'default' }) {
   const [colorA, colorB] = variant === 'alt'
-    ? ['bg-amber-200/40', 'bg-emerald-200/40']
-    : ['bg-emerald-200/40', 'bg-amber-200/40']
+    ? ['bg-amber-300/40', 'bg-rose-300/35']
+    : ['bg-emerald-300/40', 'bg-amber-200/40']
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">

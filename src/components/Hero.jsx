@@ -7,25 +7,25 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-linear-to-b from-emerald-50 to-white px-4 pt-24 sm:px-6 lg:px-12 xl:px-20"
+      className="relative flex min-h-screen items-center overflow-hidden bg-linear-to-br from-emerald-100 via-amber-50 to-white px-4 pt-24 sm:px-6 lg:px-12 xl:px-20"
     >
       <BackgroundBlobs />
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 py-10 md:grid-cols-2">
         <div className="text-center md:text-left">
           <Reveal>
             <p className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-              Welcome to
+              स्वागतम्
             </p>
           </Reveal>
           <SplitText
             as="h1"
             text={SITE.name}
-            className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl"
+            className="mt-3 bg-linear-to-r from-emerald-700 via-teal-600 to-amber-600 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-5xl"
             staggerMs={90}
           />
           <SplitText
             as="p"
-            text="Centre for Ayurvedic & Haemostatic Healthcare in Ghazipur"
+            text="ग़ाज़ीपुर में आयुर्वेदिक एवं हेमोस्टेटिक स्वास्थ्य सेवा केंद्र"
             className="mt-2 text-lg font-medium text-emerald-800 sm:text-xl"
             staggerMs={35}
             startDelay={350}
@@ -37,20 +37,20 @@ function Hero() {
           </Reveal>
           <Reveal delay={100}>
             <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
-              We are committed to being the trusted healthcare destination in
-              Ghazipur, offering comprehensive and holistic medical care.
-              Our specialized centre for Ayurvedic and Haemostatic treatments
-              is built on a strong foundation of quality care, ensuring you
-              receive the safest and most effective natural solutions.
+              ज़ेमोरा लैब बायोटेक समग्र और प्राकृतिक चिकित्सा सेवाएं प्रदान करके
+              ग़ाज़ीपुर में एक विश्वसनीय स्वास्थ्य सेवा केंद्र बनने के लिए
+              प्रतिबद्ध है। आयुर्वेदिक और हेमोस्टेटिक उपचारों के लिए समर्पित
+              हमारा यह केंद्र गुणवत्तापूर्ण चिकित्सा पर आधारित है, जिससे आपको
+              सुरक्षित और प्रभावी प्राकृतिक समाधान मिलते हैं।
             </p>
           </Reveal>
           <Reveal delay={200}>
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
               <a
                 href="#appointment"
-                className="rounded-md bg-emerald-700 px-6 py-3 text-center text-sm font-semibold text-white shadow transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-lg active:translate-y-0"
+                className="rounded-md bg-linear-to-r from-emerald-600 to-teal-600 px-6 py-3 text-center text-sm font-semibold text-white shadow transition duration-200 hover:-translate-y-0.5 hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg active:translate-y-0"
               >
-                Book Appointment Now
+                अभी अपॉइंटमेंट बुक करें
               </a>
               <a
                 href={whatsappHref}
@@ -58,7 +58,7 @@ function Hero() {
                 rel="noopener noreferrer"
                 className="rounded-md border border-emerald-700 px-6 py-3 text-center text-sm font-semibold text-emerald-700 transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-50 hover:shadow-lg active:translate-y-0"
               >
-                Consult on WhatsApp
+                व्हाट्सएप पर परामर्श लें
               </a>
             </div>
           </Reveal>
@@ -68,7 +68,7 @@ function Hero() {
           <div className="animate-float">
             <img
               src="/labimage.jpeg"
-              alt="Zemora Lab Biotech store, fully stocked with Ayurvedic and herbal products"
+              alt="ज़ेमोरा लैब बायोटेक की दुकान, आयुर्वेदिक एवं हर्बल उत्पादों से भरी हुई"
               className="w-full rounded-2xl object-cover shadow-xl ring-1 ring-slate-200"
             />
           </div>

@@ -1,14 +1,14 @@
 export const SITE = {
-  name: 'Zemora Lab Biotech',
-  tagline: 'Ayurved Apnaye, Jivan Bachaye',
-  subtitle: 'Swasthya Aur Vishwas Ka Sangam',
-  doctor: 'Dr. Govind Kumar',
-  doctorTitle: 'D. Pharm & Licensed Medical Practitioner',
+  name: 'ज़ेमोरा लैब बायोटेक',
+  tagline: 'आयुर्वेद अपनाएं, जीवन बचाएं',
+  subtitle: 'स्वास्थ्य और विश्वास का संगम',
+  doctor: 'डॉ. गोविंद कुमार',
+  doctorTitle: 'डी. फार्मा एवं लाइसेंस प्राप्त चिकित्सा व्यवसायी',
   phone: '8795053108',
   phoneDisplay: '+91 87950 53108',
   email: 'govindkumar355555@gmail.com',
-  address: 'Chaukiya Mirnapur Buzurg Road, Ghazipur, Uttar Pradesh (near Scholar Academy)',
-  hours: '10:00 AM – 07:00 PM',
+  address: 'चौकिया मिरनपुर बुजुर्ग रोड, ग़ाज़ीपुर, उत्तर प्रदेश (स्कॉलर एकेडमी के पास)',
+  hours: 'सुबह 10:00 बजे से शाम 07:00 बजे तक',
   gst: '09AACCZ9282A1Z3',
 }
 

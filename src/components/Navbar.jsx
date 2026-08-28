@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { SITE, telHref } from '../siteConfig'
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Facilities', href: '#facilities' },
-  { label: 'Treatments', href: '#services' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Appointment', href: '#appointment' },
+  { label: 'होम', href: '#home' },
+  { label: 'हमारे बारे में', href: '#about' },
+  { label: 'सुविधाएं', href: '#facilities' },
+  { label: 'उपचार', href: '#services' },
+  { label: 'गैलरी', href: '#gallery' },
+  { label: 'सामान्य प्रश्न', href: '#faq' },
+  { label: 'अपॉइंटमेंट', href: '#appointment' },
 ]
 
 function Navbar() {
@@ -18,7 +18,7 @@ function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-12 xl:px-20">
         <a href="#home" className="flex items-center gap-3 transition duration-200 hover:opacity-80">
-          <img src="/zemrolabLogo.jpeg" alt="Zemora Lab Biotech logo" className="h-11 w-11 rounded-full object-cover" />
+          <img src="/zemrolabLogo.jpeg" alt="ज़ेमोरा लैब बायोटेक लोगो" className="h-11 w-11 rounded-full object-cover" />
           <span className="text-lg font-bold leading-tight text-slate-900 sm:text-xl">
             {SITE.name}
           </span>
@@ -40,9 +40,9 @@ function Navbar() {
 
         <a
           href={telHref}
-          className="hidden rounded-md bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow transition duration-200 hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-lg md:inline-block"
+          className="hidden rounded-md bg-linear-to-r from-emerald-600 to-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition duration-200 hover:-translate-y-0.5 hover:from-emerald-500 hover:to-teal-500 hover:shadow-lg md:inline-block"
         >
-          Call Now
+          अभी कॉल करें
         </a>
 
         <button
@@ -81,9 +81,9 @@ function Navbar() {
           <li className="pt-2">
             <a
               href={telHref}
-              className="block rounded-md bg-emerald-700 px-3 py-2 text-center text-sm font-semibold text-white"
+              className="block rounded-md bg-linear-to-r from-emerald-600 to-teal-600 px-3 py-2 text-center text-sm font-semibold text-white"
             >
-              Call Now
+              अभी कॉल करें
             </a>
           </li>
         </ul>

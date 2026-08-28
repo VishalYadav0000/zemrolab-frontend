@@ -4,14 +4,14 @@ import BackgroundBlobs from './BackgroundBlobs'
 
 const GALLERY_IMAGES = [
   {
-    src: '/WhatsApp Image 2026-08-27 at 10.20.49 PM.jpeg',
-    alt: 'Zemora Lab Biotech consultation room and clinic certification board',
-    caption: 'Consultation Room & Clinic Board',
+    src: '/WhatsApp Image 2026-08-28 at 8.27.13 PM.jpeg',
+    alt: 'ज़ेमोरा लैब बायोटेक में मरीज़ का परामर्श एवं जांच',
+    caption: 'मरीज़ परामर्श एवं जांच',
   },
   {
-    src: '/WhatsApp Image 2026-08-27 at 10.20.51 PM.jpeg',
-    alt: 'Medicine counter shelves stocked with herbal formulations at Zemora Lab Biotech',
-    caption: 'Medicine Counter & Lab Stock',
+    src: '/WhatsApp Image 2026-08-28 at 8.27.15 PM.jpeg',
+    alt: 'ज़ेमोरा लैब बायोटेक की औषधि काउंटर पर हर्बल उत्पाद',
+    caption: 'औषधि काउंटर',
   },
 ]
 
@@ -22,12 +22,13 @@ function Gallery() {
       <div className="relative z-10 mx-auto max-w-7xl">
         <SplitText
           as="h2"
-          text="Clinic Tour & Lab Facility"
+          text="क्लिनिक टूर एवं लैब सुविधा"
           className="text-center text-3xl font-bold text-slate-900 sm:text-4xl"
         />
+        <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-linear-to-r from-amber-500 to-rose-500" />
         <Reveal delay={150}>
           <p className="mt-4 text-center text-slate-600">
-            Real photographs of our clinic board, consultation room, medicine counter and lab.
+            हमारे क्लिनिक बोर्ड, परामर्श कक्ष, दवा काउंटर और लैब की वास्तविक तस्वीरें।
           </p>
         </Reveal>
 

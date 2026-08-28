@@ -4,32 +4,33 @@ import BackgroundBlobs from './BackgroundBlobs'
 
 const FAQS = [
   {
-    question: 'What is Ayurvedic & Haemostatic Care?',
+    question: 'आयुर्वेदिक और हेमोस्टेटिक केयर क्या है?',
     answer:
-      'A treatment method combining natural plant-based therapies with circulation balance to treat diseases from their root cause.',
+      'यह पौधों पर आधारित प्राकृतिक उपचार और रक्त-संचार संतुलन का एक संयोजन है, जो बीमारी को जड़ से ठीक करने में मदद करता है।',
   },
   {
-    question: 'Why choose natural treatments?',
+    question: 'प्राकृतिक उपचार क्यों चुनें?',
     answer:
-      'It helps prevent recurrence without harsh chemical side effects or long-term dependency.',
+      'यह बिना किसी कठोर साइड इफ़ेक्ट या दवाओं की लत के बीमारी की पुनरावृत्ति को रोकता है।',
   },
   {
-    question: 'How to prepare for a consultation?',
+    question: 'परामर्श के लिए क्या तैयारी करें?',
     answer:
-      'Bring previous medical reports, blood test results and current prescriptions for a precise assessment.',
+      'सटीक मूल्यांकन के लिए अपनी पिछली मेडिकल रिपोर्ट्स, ब्लड टेस्ट और वर्तमान दवाओं की पर्ची साथ लाएं।',
   },
 ]
 
 function FAQ() {
   return (
-    <section id="faq" className="relative overflow-hidden bg-slate-50 px-4 py-20 sm:px-6 lg:px-12 xl:px-20">
+    <section id="faq" className="relative overflow-hidden bg-emerald-50/40 px-4 py-20 sm:px-6 lg:px-12 xl:px-20">
       <BackgroundBlobs />
       <div className="relative z-10 mx-auto max-w-3xl">
         <SplitText
           as="h2"
-          text="Frequently Asked Questions"
+          text="अक्सर पूछे जाने वाले प्रश्न"
           className="text-center text-3xl font-bold text-slate-900 sm:text-4xl"
         />
+        <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-linear-to-r from-emerald-500 to-amber-500" />
 
         <div className="mt-10 space-y-4">
           {FAQS.map((faq, index) => (
@@ -38,7 +39,7 @@ function FAQ() {
                 <summary className="cursor-pointer list-none text-base font-semibold text-slate-900 marker:content-none">
                   <span className="flex items-center justify-between gap-4">
                     {faq.question}
-                    <span className="shrink-0 text-emerald-700 transition duration-300 group-open:rotate-45">+</span>
+                    <span className="shrink-0 text-amber-600 transition duration-300 group-open:rotate-45">+</span>
                   </span>
                 </summary>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">
