@@ -34,7 +34,7 @@ function Contact() {
     <section id="appointment" className="relative overflow-hidden bg-amber-50/40 px-4 py-20 sm:px-6 lg:px-12 xl:px-20">
       <BackgroundBlobs variant="alt" />
       <div className="relative z-10 mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
-        <div>
+        <div className="order-2 md:order-1">
         <SplitText
           as="h2"
           text="विज़िट एवं संपर्क"
@@ -108,7 +108,7 @@ function Contact() {
         </Reveal>
         </div>
 
-        <Reveal delay={120}>
+        <Reveal delay={120} className="order-1 md:order-2">
           <form onSubmit={handleSubmit} className="space-y-6 rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
             <div>
               <h3 className="text-lg font-semibold text-slate-900">अपॉइंटमेंट बुक करें</h3>
